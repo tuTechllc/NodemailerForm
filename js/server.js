@@ -52,16 +52,16 @@ app.post('/', function (req, res) {
             secure: false,
             requireTLS: true,
             auth: {
-                user: 'tulay@tutechllc.com',
-                pass: '2.biz.tech!!Mail',
+                user: 'email@example.com',
+                pass: 'Password',
             },
             debug: true,
         });
 
         // Define email options
         var mailOptions = {
-            from:  '"tuTechLLC" <tulay@tutechllc.com>', // Sender address
-            to: 'tulay@tutechllc.com', // Recipient address
+            from:  '"Name/Business Name" <email@example.com>', // Sender address
+            to: 'email@example.com', // Recipient address
             subject: `Subject: ${req.body.subject}`, // Email subject
             text: `Client: ${req.body.fname} ${req.body.lname}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}\nMessage: ${req.body.message}`, // Email body
         };
